@@ -2047,6 +2047,7 @@ h1 {
 
 .woocommerce-cart .woocommerce-info,
 .woocommerce-cart .woocommerce-message {
+  display: none;
   border-top: 0;
   background: #fff;
   box-shadow: 0px 2px 3px rgba(32, 32, 32, 0.125); }
@@ -2056,8 +2057,10 @@ h1 {
     font-family: 'FontAwesome';
     color: #a82e37; }
 
-.woocommerce-cart .woocommerce-message::before {
-  content: '\f00d'; }
+.woocommerce-cart .woocommerce-message {
+  display: none; }
+  .woocommerce-cart .woocommerce-message::before {
+    content: '\f00d'; }
 
 .woocommerce-cart .woocommerce-cart-form {
   width: 65%;
@@ -2260,6 +2263,70 @@ h1 {
     @media screen and (max-width: 1024px) {
       .woocommerce-cart .cart-collaterals h2 {
         font-size: 18px; } }
+
+.woocommerce-checkout {
+  padding: 1em 0; }
+  .woocommerce-checkout .woocommerce-info {
+    display: none; }
+  .woocommerce-checkout h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 1em 0; }
+  .woocommerce-checkout label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #999999;
+    margin-top: .5em;
+    margin-bottom: .25em; }
+  .woocommerce-checkout input {
+    padding: .5em;
+    font-size: 16px;
+    border: 1px solid rgba(32, 32, 32, 0.15);
+    color: #333333; }
+    .woocommerce-checkout input:focus {
+      border-color: rgba(32, 32, 32, 0.25); }
+  .woocommerce-checkout textarea {
+    padding: .5em;
+    font-family: "Avenir", "Lato", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px; }
+  .woocommerce-checkout form .form-row .required {
+    border-bottom: 0;
+    text-decoration: none;
+    color: #a82e37; }
+  .woocommerce-checkout form .form-row .woocommerce-validated {
+    border-color: #978d53; }
+  .woocommerce-checkout table.shop_table {
+    border-radius: 0;
+    background: #fff;
+    border: 0;
+    box-shadow: 0px 2px 3px rgba(32, 32, 32, 0.15); }
+    .woocommerce-checkout table.shop_table thead {
+      color: #333333;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .125em; }
+      .woocommerce-checkout table.shop_table thead th {
+        padding: 1em; }
+    .woocommerce-checkout table.shop_table tfoot th {
+      padding: 1em; }
+    .woocommerce-checkout table.shop_table .order-total {
+      font-size: 16px;
+      padding: 1em; }
+      .woocommerce-checkout table.shop_table .order-total .amount {
+        font-size: 24px;
+        color: #a82e37; }
+  .woocommerce-checkout .woocommerce-checkout-payment .place-order .button {
+    background: #a82e37;
+    border: 2px solid #a82e37;
+    height: 45px;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease; }
+    .woocommerce-checkout .woocommerce-checkout-payment .place-order .button:hover {
+      background: transparent;
+      color: #a82e37; }
 
 .column-wrap {
   display: -webkit-flex;
