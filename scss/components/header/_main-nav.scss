@@ -1,0 +1,43 @@
+.main-nav {
+  float: left;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
+
+  a {
+    display: block;
+    padding: 9px 0;
+    margin-right: 50px;
+    color: $color-neutral-brightest;
+    font-size: $font-size-small;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      margin-right: 25px;
+    }
+
+    &:hover {
+      border-bottom: 2px solid $color-highlight;
+      color: $color-neutral-1;
+    }
+  }
+
+  li {
+    float: left;
+
+    &:last-child {
+      a {
+        margin-right: 0;
+      }
+    }
+
+    &.current-menu-item {
+      a {
+        border-color: $color-highlight;
+      }
+    }
+  }
+}

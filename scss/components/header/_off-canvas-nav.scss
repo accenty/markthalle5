@@ -1,0 +1,153 @@
+.hamburger {
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  top: 50%;
+  right: #{$content-padding / 1.5};
+  margin-top: -8px;
+  cursor: pointer;
+  display: none;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    display: block;
+  }
+
+  span,
+  &::before,
+  &::after {
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background: $color-neutral-brightest;
+    transition: $transition;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  span {
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &.active {
+    &::before {
+      transform: rotate(45deg);
+      top: 5px;
+    }
+
+    span {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      bottom: 5px;
+    }
+  }
+}
+
+.off-canvas {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  background: $color-neutral-5;
+  height: 100vh;
+  padding: 0 0;
+  transition: $transition;
+  z-index: 9;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 70%;
+    right: -70%;
+  }
+
+  .main-nav {
+    display: block;
+    text-align: right;
+    width: 100%;
+
+    ul {
+      width: 100%;
+    }
+
+    li {
+      float: none;
+      margin: 0;
+
+      a {
+        padding: 18px 24px;
+        margin: 0;
+        font-size: 16px;
+        border-bottom: 0;
+
+        @media screen and (max-width: $breakpoint-small) {
+          font-size: 14px;
+          padding: 12px 18px;
+        }
+
+        &:hover {
+          background: $color-highlight;
+        }
+      }
+    }
+  }
+
+  .cart-nav {
+    display: block;
+    width: 100%;
+    padding: 0;
+
+    a {
+      padding: 18px 24px;
+      color: $color-neutral-brightest;
+      width: 100%;
+      display: block;
+
+      @media screen and (max-width: $breakpoint-small) {
+        font-size: 14px;
+        padding: 12px 18px;
+      }
+    }
+  }
+
+  .search-wrap {
+    width: 100%;
+    padding: 30px 10px 30px 24px;
+    background: darken($color-neutral-5,2);
+
+    @media screen and (max-width: $breakpoint-small) {
+      padding: 4px 3px 13px 18px;
+    }
+
+    @extend %clearfix;
+  }
+
+  .search-input {
+    display: block;
+    width: calc(100% - 45px);
+    margin-left: 0;
+    max-width: none;
+    font-size: 14px;
+
+    @media screen and (max-width: $breakpoint-small) {
+      font-size: 12px;
+    }
+  }
+
+  &.show-nav {
+    right: 0;
+  }
+}

@@ -1,0 +1,74 @@
+.header {
+  background: $color-neutral-darkest;
+  color: $color-neutral-2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 97px 0;
+  z-index: 9;
+  transition: left .3s ease;
+
+  @media screen and (max-width: $breakpoint-medium-large) {
+    padding: 30px 0;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    padding: 10px 0;
+    position: fixed;
+  }
+
+  .content-wrap {
+    // position: relative;
+    @extend %clearfix;
+  }
+
+  a {
+    color: $color-neutral-brightest;
+    font-size: 14px;
+  }
+
+  .header-meta {
+    float: right;
+    width: 30%;
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      width: 35%;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+
+  &.sticky {
+    position: fixed;
+    padding: 25px 0;
+    animation: slideFromTop .3s ease forwards;
+    box-shadow: 0px 2px 5px rgba($color-neutral-darkest,.25);
+
+    @media screen and (max-width: $breakpoint-small) {
+      animation: none;
+      padding: 10px 0;
+    }
+  }
+
+  &.show-nav {
+    left: -50%;
+
+    @media screen and (max-width: $breakpoint-small) {
+      left: -70%;
+    }
+  }
+
+  @keyframes slideFromTop {
+    0% {
+      top: -100%;
+      opacity: 0;
+    }
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.cart-nav {
+  float: right;
+  color: $color-neutral-brightest;
+  text-align: right;
+  padding: 9px 0;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  .cart-count {
+    background: transparent;
+    padding: 9px;
+
+    &::before {
+      content: '\f07a';
+      font-family: 'FontAwesome';
+      margin-right: .5em;
+      transition: $transition;
+    }
+
+    &:hover {
+      background: $color-highlight;
+    }
+  }
+}

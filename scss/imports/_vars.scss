@@ -1,0 +1,67 @@
+// VARIABLES
+
+// Colours
+// Main colours
+
+$color-background:    #efeeed;
+$color-main:          #202020;
+$color-highlight:     #a82e37;
+
+// Neutral colours
+
+$color-neutral-brightest:    #fff;
+$color-neutral-1:            #efeeed;
+$color-neutral-2:            #b3b3b3;
+$color-neutral-3:            #828282;
+$color-neutral-4:            #999999;
+$color-neutral-5:            #202020;
+$color-neutral-6:            #1a1a1a;
+$color-neutral-darkest:      #000;
+
+// Font colours
+
+$color-font:                 #333333;
+$color-font-dark:            $color-neutral-4;
+
+// Specific colours
+
+$color-spec-wine:            #a66745;
+$color-spec-meat:            #a36968;
+$color-spec-cheese:          #978d53;
+$color-spec-accessories:     $color-neutral-3;
+
+// Fonts
+
+$font-family:                'Avenir','Lato',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+// Font sizes
+
+$font-size-base:             16px;
+$font-size-small:            12px;
+$font-size-large:            18px;
+
+
+$font-size-h1:               36px;
+$font-size-h2:               $font-size-h1;
+$font-size-h4:               21px;
+
+// Line heights
+
+$line-height-base:           1.6em;
+
+// Website Dimensions
+
+$content-width:              1260px;
+$content-padding:            30px;
+
+// Breakpoints
+
+$breakpoint-large:           1280px;
+$breakpoint-medium-large:    1024px;
+$breakpoint-medium:          768px;
+$breakpoint-small:           560px;
+$breakpoint-xsmall:          320px;
+
+// Other stuff
+
+$transition:                 all .3s ease;

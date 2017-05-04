@@ -1,0 +1,152 @@
+.title-container {
+  height: 62.1vh;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $color-neutral-brightest;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-small) {
+    height: 55vh;
+  }
+
+  .content-wrap {
+    height: 100%;
+  }
+
+  .inner-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: calc(100% - 160px);
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      height: calc(100% - 106px);
+      max-width: none;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      height: calc(100% - 66px);
+      max-width: none;
+    }
+
+    & > div {
+      width: 50%;
+      max-width: 550px;
+      position: relative;
+      z-index: 2;
+
+      @media screen and (max-width: $breakpoint-medium) {
+        width: 60%;
+        max-width: none;
+      }
+
+      @media screen and (max-width: $breakpoint-small) {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    line-height: 1.6em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-style: italic;
+    font-weight: 700;
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      font-size: 24px;
+    }
+  }
+
+  p {
+    font-size: $font-size-large;
+    line-height: 2.25em;
+    letter-spacing: .2em;
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      font-size: 14px;
+    }
+  }
+
+  .product-image {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%);
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      right: -24%;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      width: 80%;
+      right: -35%;
+      opacity: .5;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      width: 80%;
+      right: -45%;
+      opacity: .5;
+    }
+  }
+
+  .shop-cta {
+    position: absolute;
+    background: $color-neutral-6;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: $color-background;
+    padding: 67px 0;
+    font-weight: 700;
+    letter-spacing: .14em;
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      font-size: 28px;
+      padding: 40px 0;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      font-size: 18px;
+      padding: 20px 0;
+    }
+
+    .content-wrap {
+      display: block;
+      width: 100%;
+
+      span {
+        &::before {
+          content: '\f101';
+          font-family: 'FontAwesome';
+          font-weight: normal;
+          margin-right: 22px;
+        }
+      }
+    }
+
+    &:hover {
+      background: $color-highlight;
+    }
+  }
+}

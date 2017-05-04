@@ -1,0 +1,160 @@
+.assortment-container {
+  background: url('img/noise-texture.jpg');
+  color: $color-neutral-brightest;
+  padding: 108px 0 118px;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 60px 0;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    font-weight: 700;
+    letter-spacing: .1em;
+    font-style: italic;
+    margin-bottom: 35px;
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      font-size: 14px;
+      line-height: 1.6em;
+    }
+  }
+
+  .column-wrap {
+    margin-top: 161px;
+
+    @media screen and (max-width: $breakpoint-medium) {
+      margin-top: 80px;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+  }
+
+  .column {
+    margin-right: 56px;
+    width: 100%;
+    min-height: 245px;
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+      min-height: 238px;
+      margin-right: 32px;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      min-height: 233px;
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      min-height: 0;
+      margin-right: 0;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    figure {
+      height: 170px;
+      background: url('img/texture.jpg') $color-background;
+      position: relative;
+
+      @media screen and (max-width: $breakpoint-medium) {
+        min-height: 233px;
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: $breakpoint-small) {
+        display: none;
+      }
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 33px;
+      transform: translateX(-50%);
+      transition: $transition;
+    }
+
+    h4 {
+      font-size: $font-size-h4;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $color-neutral-brightest;
+      letter-spacing: .2em;
+      padding: 1.2em 0;
+      position: relative;
+      transition: $transition;
+
+      @media screen and (max-width: $breakpoint-medium-large) {
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: $breakpoint-medium) {
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: $breakpoint-small) {
+        padding: .8em 1em;
+      }
+
+      &::after {
+        content: '\f105';
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(-50%);
+
+        @media screen and (max-width: $breakpoint-small) {
+          display: inline-block;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 25px rgba($color-neutral-darkest,.2), 0px 5px 10px rgba($color-neutral-darkest,.1);
+
+      h4 {
+        background: $color-neutral-4;
+      }
+
+      figure {
+        img {
+          bottom: 45px;
+        }
+      }
+    }
+  }
+}
