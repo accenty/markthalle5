@@ -50,6 +50,14 @@ a {
   }
 }
 
+.regular-page {
+  padding: 3em 0;
+
+  b {
+    font-weight: 700;
+  }
+}
+
 .page-wrap {
   position: relative;
   transition: $transition;
