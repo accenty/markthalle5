@@ -88,12 +88,16 @@
       }
 
       .price-box {
+        @extend %clearfix;
         margin: 1em 0 0;
         padding: 1em .5em;
         border-bottom: 1px solid rgba($color-main,.15);
         border-top: 1px solid rgba($color-main,.15);
 
-        .price {
+        .price,
+        .price-per-unit {
+          display: block;
+
           strong {
             display: block;
             font-weight: 800;
@@ -110,6 +114,13 @@
           @media screen and (max-width: $breakpoint-medium-large) {
             font-size: 24px;
           }
+        }
+
+        .price-per-unit {
+          opacity: .8;
+          margin-top: .5em;
+          font-size: 21px;
+          color: $color-font-dark;
         }
       }
 

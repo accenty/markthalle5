@@ -26,7 +26,14 @@ global $product;
 <div class="price-box">
   <span class="price">
 		<strong>Preis</strong>
-		<?php echo $product->get_price_html(); ?></span>
+		<?php echo $product->get_price_html(); ?>
+	</span>
+	<?php if( get_field('price-per-unit-price') ): ?>
+		<span class="price-per-unit">
+			<strong>Preis pro <?php the_field('price-per-unit-unit'); ?></strong>
+			<?php the_field('price-per-unit-price'); ?>€
+		</span>
+	<?php endif; ?>
 </div>
 
 <?php if( have_rows('single-product-specifics')): ?>
