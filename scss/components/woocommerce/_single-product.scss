@@ -117,12 +117,12 @@
 
         .price-per-unit {
           display: block;
-          opacity: .8;
-          margin-top: .5em;
           font-size: 14px;
-          text-transform: uppercase;
-          letter-spacing: .15em;
-          color: $color-font-dark;
+          color: $color-font;
+
+          @media screen and (max-width: $breakpoint-small) {
+            font-size: 12px;
+          }
         }
       }
 
