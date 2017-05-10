@@ -14,7 +14,7 @@
 			titleParallax();
 		});
 
-    $('.woocommerce-Price-amount').spinner();
+    $('.quantity input[type=number]').spinner();
 
 		backTop();
 		hamburger();
