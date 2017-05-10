@@ -30,8 +30,7 @@ global $product;
 	</span>
 	<?php if( get_field('price-per-unit-price') ): ?>
 		<span class="price-per-unit">
-			<strong>Preis pro <?php the_field('price-per-unit-unit'); ?></strong>
-			<?php the_field('price-per-unit-price'); ?>€
+			(<?php the_field('price-per-unit-price'); ?>€ pro <?php the_field('price-per-unit-unit'); ?>)
 		</span>
 	<?php endif; ?>
 </div>
