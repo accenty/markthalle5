@@ -19,6 +19,7 @@
 		backTop();
 		hamburger();
 		fadeInProducts();
+		productDetailImageSwitcher();
 	});
 
 	function hamburger() {
@@ -56,6 +57,20 @@
 			setTimeout(function(){
 				$this.addClass('fade-in');
 			},75*n);
+		});
+	}
+
+	function productDetailImageSwitcher() {
+		$('.woocommerce-product-gallery__image a').click(function(e){
+			e.preventDefault();
+		});
+
+		$('.woocommerce-product-gallery__image a img').click(function() {
+			var $baseImageSrc = $('.woocommerce-product-gallery__image:first-of-type a img').attr('src');
+			var $href = $(this).attr('src');
+
+			$('.woocommerce-product-gallery__image:first-of-type a img').attr('src',$href);
+			$(this).attr('src',$baseImageSrc);
 		});
 	}
 

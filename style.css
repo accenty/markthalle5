@@ -1878,6 +1878,15 @@ h1 {
   .woocommerce div.product div.images {
     margin-bottom: 0; } }
 
+.woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) {
+  width: calc((100% / 4) - ((3 * 10px) / 4));
+  margin-top: 10px;
+  margin-right: 10px;
+  overflow: hidden; }
+
+.woocommerce div.product div.images .woocommerce-product-gallery__image:last-of-type {
+  margin-right: 0; }
+
 @media screen and (max-width: 560px) {
   .woocommerce .single-product {
     padding: 0; } }

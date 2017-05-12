@@ -5,6 +5,19 @@
       @media screen and (max-width: $breakpoint-small) {
         margin-bottom: 0;
       }
+
+      .woocommerce-product-gallery__image {
+        &:nth-child(n+2) {
+          width: calc((100% / 4) - ((3 * 10px) / 4));
+          margin-top: 10px;
+          margin-right: 10px;
+          overflow: hidden;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
     }
   }
 
