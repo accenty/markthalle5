@@ -923,7 +923,7 @@ button {
   float: right;
   color: #fff;
   text-align: right;
-  padding: 9px 0; }
+  padding: 0; }
   @media screen and (max-width: 768px) {
     .cart-nav {
       display: none; } }
@@ -931,7 +931,8 @@ button {
     font-size: 14px; }
   .cart-nav .cart-count {
     background: transparent;
-    padding: 9px; }
+    padding: 9px;
+    display: inline-block; }
     .cart-nav .cart-count::before {
       content: '\f07a';
       font-family: 'FontAwesome';
