@@ -1139,7 +1139,7 @@ button {
         opacity: .5; } }
   .title-container .shop-cta {
     position: absolute;
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.8);
     bottom: 0;
     left: 0;
     width: 100%;
@@ -2607,6 +2607,12 @@ h1 {
       font-size: 14px; }
     .woocommerce-cart .cart-collaterals .cart_totals tbody td {
       text-align: right; }
+    .woocommerce-cart .cart-collaterals .cart_totals table small {
+      display: block;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .125em;
+      line-height: normal; }
     .woocommerce-cart .cart-collaterals .cart_totals .cart-subtotal td {
       font-weight: 700; }
       .woocommerce-cart .cart-collaterals .cart_totals .cart-subtotal td small {
