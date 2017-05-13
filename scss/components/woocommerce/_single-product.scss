@@ -513,7 +513,9 @@
             letter-spacing: .1em;
           }
 
-          .add-to-cart-button {
+          .add-to-cart-button,
+          .ajax_add_to_cart,
+          .button {
             text-transform: uppercase;
             font-weight: 700;
             font-size: 12px;

@@ -1,0 +1,58 @@
+.woocommerce {
+  a {
+    &.button {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .15em;
+      margin: 2em 0 .8em 0;
+      display: block;
+      background: transparent;
+      color: $color-highlight;
+      padding: 0;
+
+      &:hover {
+        background: transparent;
+        color: $color-font;
+      }
+
+      &::before {
+        content: '\f217';
+        font-family: 'FontAwesome';
+        margin-right: .25em;
+      }
+
+      &.added {
+        color: $color-cart-positive;
+
+        &::after {
+          content: '\f00c';
+          font-family: 'FontAwesome';
+        }
+      }
+    }
+
+    &.added_to_cart {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .15em;
+      margin: .5em 0 0em 0;
+      display: block;
+      background: transparent;
+      color: $color-font;
+      padding: 0;
+
+      &:hover {
+        color: $color-font-dark;
+      }
+
+      &::after {
+        display: inline-block;
+        content: '\f105';
+        font-family: 'FontAwesome';
+        margin-left: .5em;
+      }
+    }
+  }
+}
