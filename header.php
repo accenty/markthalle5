@@ -24,12 +24,22 @@
       <?php wp_nav_menu(array('theme_location' => 'header-navigation')); ?>
     </nav><!-- main-nav -->
 
-    <div class="cart-nav">
-      <a href="<?php echo wc_get_cart_url(); ?>" class="cart-count">
-        Warenkorb
-         (<span><?php echo WC()->cart->get_cart_contents_count(); ?></span>)
-      </a>
-    </div><!-- cart -->
+		<div class="cart-nav">
+			<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+
+		    $count = WC()->cart->cart_contents_count;
+		    ?><a class="cart-contents cart-count" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">Warenkorb <?php
+		    if ( $count > 0 ) {
+		        ?>
+		        <span class="cart-contents-count">(<?php echo esc_html( $count ); ?>)</span>
+		        <?php
+		    } else {
+					echo '(0)';
+				}
+		        ?></a>
+
+		<?php } ?>
+		</div>
   </div><!-- off-canvas -->
 
 	<header id="header" class="header">
@@ -54,10 +64,20 @@
 				</div>
 
 				<div class="cart-nav">
-					<a href="<?php echo wc_get_cart_url(); ?>" class="cart-count">
-						Warenkorb
-						(<span><?php echo WC()->cart->get_cart_contents_count(); ?></span>)
-					</a>
+					<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+
+				    $count = WC()->cart->cart_contents_count;
+				    ?><a class="cart-contents cart-count" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">Warenkorb <?php
+				    if ( $count > 0 ) {
+				        ?>
+				        <span class="cart-contents-count">(<?php echo esc_html( $count ); ?>)</span>
+				        <?php
+				    } else {
+							echo '(0)';
+						}
+				        ?></a>
+
+				<?php } ?>
 				</div>
 			</div>
 
@@ -66,5 +86,5 @@
 			</i><!-- hamburger -->
 		</div><!-- content-wrap -->
 	</header><!-- header -->
-	
+
 	<div class="page-wrap">
