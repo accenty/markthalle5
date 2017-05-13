@@ -1195,8 +1195,7 @@ button {
     font-size: 18px;
     font-weight: 400;
     line-height: 2.5em;
-    text-transform: uppercase;
-    letter-spacing: .2em; }
+    letter-spacing: normal; }
     @media screen and (max-width: 1024px) {
       .assortment-container p {
         font-size: 16px; } }
@@ -1205,7 +1204,7 @@ button {
         font-size: 14px;
         line-height: 1.6em; } }
   .assortment-container .column-wrap {
-    margin-top: 161px; }
+    margin-top: 50px; }
     @media screen and (max-width: 768px) {
       .assortment-container .column-wrap {
         margin-top: 80px; } }
@@ -1218,27 +1217,26 @@ button {
   .assortment-container .column {
     margin-right: 56px;
     width: 100%;
-    min-height: 245px;
-    text-align: center; }
+    min-height: 380px;
+    background-size: cover;
+    overflow: hidden; }
     @media screen and (max-width: 1024px) {
       .assortment-container .column {
-        min-height: 238px;
         margin-right: 32px; } }
     @media screen and (max-width: 768px) {
       .assortment-container .column {
-        min-height: 233px;
+        min-height: 350px;
         margin-right: 10px; } }
     @media screen and (max-width: 560px) {
       .assortment-container .column {
         min-height: 0;
         margin-right: 0;
-        text-align: left;
-        margin-bottom: 10px; } }
+        margin-bottom: 10px;
+        max-height: 125px; } }
     .assortment-container .column:last-of-type {
       margin-right: 0; }
     .assortment-container .column figure {
-      height: 170px;
-      background: url("img/texture.jpg") #efeeed;
+      height: 100%;
       position: relative; }
       @media screen and (max-width: 768px) {
         .assortment-container .column figure {
@@ -1246,16 +1244,52 @@ button {
           margin-right: 0; } }
       @media screen and (max-width: 560px) {
         .assortment-container .column figure {
-          display: none; } }
+          max-height: none;
+          height: 100%;
+          min-height: 125px;
+          display: block; } }
+    .assortment-container .column figcaption {
+      position: absolute;
+      bottom: 0;
+      text-align: left;
+      color: #efeeed;
+      line-height: normal;
+      font-size: 18px;
+      padding: 100px 40px 40px;
+      width: 100%;
+      background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.26); }
+      @media screen and (max-width: 1024px) {
+        .assortment-container .column figcaption {
+          padding: 60px 25px 25px; } }
+      .assortment-container .column figcaption p {
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: normal;
+        margin-bottom: .5em; }
+      .assortment-container .column figcaption h3 {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .125em; }
+        @media screen and (max-width: 1024px) {
+          .assortment-container .column figcaption h3 {
+            font-size: 21px; } }
+        @media screen and (max-width: 768px) {
+          .assortment-container .column figcaption h3 {
+            font-size: 18px; } }
     .assortment-container .column img {
       display: block;
       position: absolute;
       left: 50%;
-      bottom: 33px;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       transition: all 0.3s ease; }
+      @media screen and (max-width: 560px) {
+        .assortment-container .column img {
+          display: none; } }
     .assortment-container .column h4 {
       font-size: 21px;
       text-transform: uppercase;

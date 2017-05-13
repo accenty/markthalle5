@@ -63,15 +63,17 @@
             $image = get_sub_field('image');
             $content = get_sub_field('content');
             $link = get_sub_field('link');
-            $colour = get_sub_field('colour');
+            $bgImage = get_sub_field('background-image');
           ?>
 
           <?php if($link): ?>
-          <a href="<?php echo $link; ?>" class="column" style="background-color: <?php echo $colour; ?>">
+          <a href="<?php echo $link; ?>" class="column" style="background-image: url('<?php echo $bgImage; ?>')">
             <figure>
               <img src="<?php echo $image; ?>" alt="">
+              <figcaption>
+                <?php echo $content; ?>
+              </figcaption>
             </figure>
-            <h4><?php echo $content; ?></h4>
           </a><!-- column -->
           <?php endif; ?>
 
