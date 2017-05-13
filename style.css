@@ -760,7 +760,7 @@ button {
     font-size: 14px; }
   .header .header-meta {
     float: right;
-    width: 30%; }
+    width: 33%; }
     @media screen and (max-width: 1024px) {
       .header .header-meta {
         width: 35%; } }
@@ -860,7 +860,7 @@ button {
 
 .search-wrap {
   float: left;
-  width: calc(100% - 130px - 22px);
+  width: calc(100% - 138px - 22px);
   margin-right: 22px; }
   @media screen and (max-width: 1024px) {
     .search-wrap {
