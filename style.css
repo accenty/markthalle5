@@ -1685,6 +1685,44 @@ h1 {
     .woocommerce a.button.added::after {
       content: '\f00c';
       font-family: 'FontAwesome'; }
+  .woocommerce a.button.loading {
+    opacity: 1;
+    color: #999999;
+    position: relative; }
+    .woocommerce a.button.loading::after {
+      font-size: 14px;
+      display: block;
+      line-height: 1;
+      width: 14px;
+      height: 14px;
+      text-align: center;
+      padding-left: 2px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      top: -4px;
+      right: 0;
+      font-family: 'FontAwesome';
+      content: '\f013';
+      -webkit-animation: none;
+      animation: none;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 .woocommerce a.added_to_cart {
   text-transform: uppercase;

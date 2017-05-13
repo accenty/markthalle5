@@ -30,6 +30,39 @@
           font-family: 'FontAwesome';
         }
       }
+
+      &.loading {
+        opacity: 1;
+        color: $color-font-dark;
+        position: relative;
+
+        &::after {
+          font-size: 14px;
+          display: block;
+          line-height: 1;
+          width: 14px;
+          height: 14px;
+          text-align: center;
+          padding-left: 2px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          top: -4px;
+          right: 0;
+          font-family: 'FontAwesome';
+          content: '\f013';
+          animation: none;
+          animation: spin 1.5s linear infinite;
+
+          @keyframes spin {
+            0% {
+              transform: rotate(0);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
     }
 
     &.added_to_cart {
