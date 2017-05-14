@@ -25,16 +25,16 @@ wc_print_notices();
 
 ?>
 
-<p class="cart-empty">
+<h2 class="cart-empty">
 	<?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?>
-</p>
+</h2>
 
 <?php do_action( 'woocommerce_cart_is_empty' ); ?>
 
 <?php if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 	<p class="return-to-shop">
 		<a class="button wc-backward" href="<?php echo get_home_url(); ?>/shop">
-			<?php _e( 'Return To Shop', 'woocommerce' ) ?>
+			<?php _e( 'Zurück zum Shop', 'woocommerce' ) ?>
 		</a>
 	</p>
 <?php endif; ?>

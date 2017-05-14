@@ -1758,6 +1758,8 @@ h1 {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+  .woocommerce a.button.wc-backward::before {
+    display: none; }
 
 .woocommerce a.added_to_cart {
   text-transform: uppercase;
@@ -2451,9 +2453,18 @@ h1 {
       .woocommerce div.product .woocommerce-tabs .panel p {
         font-size: 14px; } }
 
-.woocommerce-cart main > .content-wrap {
-  padding-top: 2em;
-  padding-bottom: 2em; }
+.woocommerce-cart main {
+  min-height: 60vh; }
+  .woocommerce-cart main > .content-wrap {
+    padding-top: 2em;
+    padding-bottom: 2em; }
+
+.woocommerce-cart h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .125em;
+  margin-top: 1.5em; }
 
 .woocommerce-cart .woocommerce-info,
 .woocommerce-cart .woocommerce-message {
@@ -2489,7 +2500,7 @@ h1 {
   background: #fff;
   box-shadow: 0px 2px 3px rgba(32, 32, 32, 0.15);
   border: 0;
-  margin-top: 2.9em; }
+  margin-top: 4.9em; }
   @media screen and (max-width: 1024px) {
     .woocommerce-cart table.shop_table {
       margin-top: 2.5em; } }
