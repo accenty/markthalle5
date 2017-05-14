@@ -1331,7 +1331,7 @@ button {
 
 .featured-products-container {
   padding: 173px 0 53px;
-  background: url("img/texture-large.jpg");
+  background: url("img/blur-bg.jpg");
   background-size: cover; }
   @media screen and (max-width: 1024px) {
     .featured-products-container {
@@ -1348,11 +1348,10 @@ button {
     width: 100%;
     position: relative;
     display: block;
-    background: #fff;
-    margin-right: 84px;
+    margin-right: 57px;
     margin-bottom: 159px;
-    padding: 2.5em 1.5em;
-    text-align: center;
+    padding: 36px 45px;
+    text-align: left;
     color: #333333;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1360,9 +1359,11 @@ button {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border: 2px solid #fff;
+    border-left: 0; }
     @media screen and (max-width: 1024px) {
       .featured-products-container .item {
         padding: 2em 1em 1em;
@@ -1373,25 +1374,23 @@ button {
         margin-right: 10px; } }
     @media screen and (max-width: 560px) {
       .featured-products-container .item {
+        border-left: 2px solid #fff;
         text-align: left;
         padding: 1em;
         margin-bottom: 10px;
         margin-right: 0; } }
     .featured-products-container .item:last-of-type {
       margin-right: 0; }
-    .featured-products-container .item:hover {
-      box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.1); }
-      .featured-products-container .item:hover button {
-        background: transparent;
-        color: #333333; }
-      .featured-products-container .item:hover img {
-        bottom: -34px; }
+    .featured-products-container .item:hover button {
+      background: transparent;
+      color: #fff; }
+    .featured-products-container .item:hover img {
+      bottom: -34px; }
   .featured-products-container h4 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #333333;
-    margin-bottom: .5em;
-    letter-spacing: .16em;
+    font-size: 28px;
+    line-height: 38px;
+    color: #fff;
+    margin-bottom: 10px;
     font-weight: 700; }
     @media screen and (max-width: 1024px) {
       .featured-products-container h4 {
@@ -1401,25 +1400,20 @@ button {
         margin-bottom: 0;
         font-size: 18px; } }
   .featured-products-container h5 {
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: .8em; }
+    font-size: 16px;
+    margin-bottom: 1em;
+    color: #fff; }
     @media screen and (max-width: 1024px) {
       .featured-products-container h5 {
         font-size: 16px; } }
   .featured-products-container em {
-    padding: 1.5em 0;
-    font-size: 18px;
-    line-height: 1.77em;
-    width: 80%;
+    font-size: 14px;
+    line-height: 1.57em;
+    width: 90%;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 1em;
-    font-style: italic;
-    color: #999999;
-    border: 1px dotted rgba(153, 153, 153, 0.3);
-    border-left: 0;
-    border-right: 0; }
+    margin: 0;
+    margin-top: 31px;
+    color: #fff; }
     @media screen and (max-width: 1024px) {
       .featured-products-container em {
         font-size: 16px; } }
@@ -1429,12 +1423,11 @@ button {
         padding: 0;
         border: 0; } }
   .featured-products-container .amount {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 800;
     display: block;
-    margin-top: 3px;
-    letter-spacing: .16em;
-    color: #1a1a1a; }
+    margin-top: 26px;
+    color: #fff; }
     @media screen and (max-width: 1024px) {
       .featured-products-container .amount {
         font-size: 28px; } }
@@ -1449,17 +1442,21 @@ button {
         margin-bottom: 10px;
         width: 50%;
         display: inline-block; } }
-  .featured-products-container button {
-    background: #1a1a1a;
-    border: 2px solid #1a1a1a;
+  .featured-products-container .price-per-unit {
     color: #fff;
-    width: 57%;
+    margin-top: 7px; }
+  .featured-products-container button {
+    background: #a82e37;
+    border: 0;
+    border: 2px solid #a82e37;
+    color: #fff;
+    width: 90%;
     height: 49px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .16em;
     font-size: 16px;
-    margin: 0 auto;
+    margin: 0;
     margin-top: 32px;
     cursor: pointer;
     transition: all 0.3s ease; }
@@ -1468,14 +1465,17 @@ button {
         width: 100%; } }
     @media screen and (max-width: 560px) {
       .featured-products-container button {
-        margin-top: .5em;
+        margin-top: 2em;
         font-size: 14px;
         height: 40px; } }
   .featured-products-container img {
     position: absolute;
-    bottom: -58px;
-    right: -113px;
-    transition: all 0.3s ease; }
+    top: 50%;
+    right: calc(-30% + 7px);
+    transition: all 0.3s ease;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
     @media screen and (max-width: 1024px) {
       .featured-products-container img {
         display: none; } }

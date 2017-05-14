@@ -113,10 +113,15 @@
 
                 <h4><?php the_title(); ?></h4>
                 <h5><?php the_field('product-type'); ?></h5>
-                <em><?php the_field('product-additional-info') ?></em>
                 <?php echo woocommerce_price($product->get_price_including_tax()); ?>
+              	<?php if( get_field('price-per-unit-price') ): ?>
+              		<span class="price-per-unit">
+              			(<?php the_field('price-per-unit-price'); ?>€ / <?php the_field('price-per-unit-unit'); ?>)
+              		</span>
+              	<?php endif; ?>
+                <em><?php the_field('product-additional-info') ?></em>
                 <button>
-                  Kaufen
+                  Details ansehen
                 </button>
               </a><!-- item -->
 

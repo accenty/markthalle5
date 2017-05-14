@@ -1,6 +1,6 @@
 .featured-products-container {
   padding: 173px 0 53px;
-  background: url('img/texture-large.jpg');
+  background: url('img/blur-bg.jpg');
   background-size: cover;
 
   @media screen and (max-width: $breakpoint-medium-large) {
@@ -21,15 +21,16 @@
     width: 100%;
     position: relative;
     display: block;
-    background: $color-neutral-brightest;
-    margin-right: 84px;
+    margin-right: 57px;
     margin-bottom: 159px;
-    padding: 2.5em 1.5em;
-    text-align: center;
+    padding: 36px 45px;
+    text-align: left;
     color: $color-font;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    border: 2px solid $color-neutral-brightest;
+    border-left: 0;
 
     @media screen and (max-width: $breakpoint-medium-large) {
       padding: 2em 1em 1em;
@@ -42,6 +43,7 @@
     }
 
     @media screen and (max-width: $breakpoint-small) {
+      border-left: 2px solid $color-neutral-brightest;
       text-align: left;
       padding: 1em;
       margin-bottom: 10px;
@@ -53,11 +55,11 @@
     }
 
     &:hover {
-      box-shadow: 0px 4px 25px rgba($color-neutral-darkest,.2), 0px 5px 10px rgba($color-neutral-darkest,.1);
+      // box-shadow: 0px 4px 25px rgba($color-neutral-darkest,.2), 0px 5px 10px rgba($color-neutral-darkest,.1);
 
       button {
         background: transparent;
-        color: $color-font;
+        color: $color-neutral-brightest;
       }
 
       img {
@@ -67,11 +69,10 @@
   }
 
   h4 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: $color-font;
-    margin-bottom: .5em;
-    letter-spacing: .16em;
+    font-size: 28px;
+    line-height: 38px;
+    color: $color-neutral-brightest;
+    margin-bottom: 10px;
     font-weight: 700;
 
     @media screen and (max-width: $breakpoint-medium-large) {
@@ -85,9 +86,9 @@
   }
 
   h5 {
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: .8em;
+    font-size: 16px;
+    margin-bottom: 1em;
+    color: $color-neutral-brightest;
 
     @media screen and (max-width: $breakpoint-medium-large) {
       font-size: 16px;
@@ -95,18 +96,13 @@
   }
 
   em {
-    padding: 1.5em 0;
-    font-size: 18px;
-    line-height: 1.77em;
-    width: 80%;
+    font-size: 14px;
+    line-height: 1.57em;
+    width: 90%;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 1em;
-    font-style: italic;
-    color: $color-neutral-4;
-    border: 1px dotted rgba($color-neutral-4,.3);
-    border-left: 0;
-    border-right: 0;
+    margin: 0;
+    margin-top: 31px;
+    color: $color-neutral-brightest;
 
     @media screen and (max-width: $breakpoint-medium-large) {
       font-size: 16px;
@@ -120,12 +116,11 @@
   }
 
   .amount {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 800;
     display: block;
-    margin-top: 3px;
-    letter-spacing: .16em;
-    color: $color-neutral-6;
+    margin-top: 26px;
+    color: $color-neutral-brightest;
 
     @media screen and (max-width: $breakpoint-medium-large) {
       font-size: 28px;
@@ -145,17 +140,23 @@
     }
   }
 
-  button {
-    background: $color-neutral-6;
-    border: 2px solid $color-neutral-6;
+  .price-per-unit {
     color: $color-neutral-brightest;
-    width: 57%;
+    margin-top: 7px;
+  }
+
+  button {
+    background: $color-highlight;
+    border: 0;
+    border: 2px solid $color-highlight;
+    color: $color-neutral-brightest;
+    width: 90%;
     height: 49px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .16em;
     font-size: 16px;
-    margin: 0 auto;
+    margin: 0;
     margin-top: 32px;
     cursor: pointer;
     transition: $transition;
@@ -165,17 +166,18 @@
     }
 
     @media screen and (max-width: $breakpoint-small) {
-      margin-top: .5em;
+      margin-top: 2em;
       font-size: 14px;
-      height: 40px;  
+      height: 40px;
     }
   }
 
   img {
     position: absolute;
-    bottom: -58px;
-    right: -113px;
+    top: 50%;
+    right: calc(-30% + 7px);
     transition: $transition;
+    transform: translateY(-50%);
 
     @media screen and (max-width: $breakpoint-medium-large) {
       display: none;
