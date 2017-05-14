@@ -92,7 +92,7 @@
         right: 0;
         content: '';
         display: block;
-        background: rgba(0,0,0,.25);
+        background: rgba(0,0,0,.5);
         opacity: 0;
         transition: $transition;
       }
@@ -216,7 +216,7 @@
         }
 
         img {
-          bottom: 45px;
+          transform: translate(-50%,calc(-50% - 10px));
         }
       }
     }
