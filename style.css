@@ -1238,6 +1238,17 @@ button {
     .assortment-container .column figure {
       height: 100%;
       position: relative; }
+      .assortment-container .column figure::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: '';
+        display: block;
+        background: rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        transition: all 0.3s ease; }
       @media screen and (max-width: 768px) {
         .assortment-container .column figure {
           min-height: 233px;
@@ -1252,6 +1263,7 @@ button {
       position: absolute;
       bottom: 0;
       text-align: left;
+      z-index: 2;
       color: #efeeed;
       line-height: normal;
       font-size: 18px;
@@ -1286,7 +1298,8 @@ button {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      transition: all 0.3s ease; }
+      transition: all 0.3s ease;
+      z-index: 1; }
       @media screen and (max-width: 560px) {
         .assortment-container .column img {
           display: none; } }
@@ -1326,6 +1339,8 @@ button {
       box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.1); }
       .assortment-container .column:hover h4 {
         background: #999999; }
+      .assortment-container .column:hover figure::after {
+        opacity: 1; }
       .assortment-container .column:hover figure img {
         bottom: 45px; }
 
