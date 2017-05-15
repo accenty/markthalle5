@@ -1,7 +1,7 @@
 .search-wrap {
   @extend %clearfix;
   float: left;
-  width: calc(100% - 130px - 22px);
+  width: calc(100% - 138px - 22px);
   margin-right: 22px;
 
   @media screen and (max-width: $breakpoint-medium-large) {

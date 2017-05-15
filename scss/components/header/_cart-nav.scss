@@ -2,7 +2,7 @@
   float: right;
   color: $color-neutral-brightest;
   text-align: right;
-  padding: 9px 0;
+  padding: 0;
 
   @media screen and (max-width: $breakpoint-medium) {
     display: none;
@@ -15,6 +15,7 @@
   .cart-count {
     background: transparent;
     padding: 9px;
+    display: inline-block;
 
     &::before {
       content: '\f07a';

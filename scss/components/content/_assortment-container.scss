@@ -28,8 +28,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 2.5em;
-    text-transform: uppercase;
-    letter-spacing: .2em;
+    letter-spacing: normal;
 
     @media screen and (max-width: $breakpoint-medium-large) {
       font-size: 16px;
@@ -42,7 +41,7 @@
   }
 
   .column-wrap {
-    margin-top: 161px;
+    margin-top: 50px;
 
     @media screen and (max-width: $breakpoint-medium) {
       margin-top: 80px;
@@ -57,24 +56,24 @@
   .column {
     margin-right: 56px;
     width: 100%;
-    min-height: 245px;
-    text-align: center;
+    min-height: 380px;
+    background-size: cover;
+    overflow: hidden;
 
     @media screen and (max-width: $breakpoint-medium-large) {
-      min-height: 238px;
       margin-right: 32px;
     }
 
     @media screen and (max-width: $breakpoint-medium) {
-      min-height: 233px;
+      min-height: 350px;
       margin-right: 10px;
     }
 
     @media screen and (max-width: $breakpoint-small) {
       min-height: 0;
       margin-right: 0;
-      text-align: left;
       margin-bottom: 10px;
+      max-height: 125px;
     }
 
     &:last-of-type {
@@ -82,9 +81,21 @@
     }
 
     figure {
-      height: 170px;
-      background: url('img/texture.jpg') $color-background;
+      height: 100%;
       position: relative;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: '';
+        display: block;
+        background: rgba(0,0,0,.5);
+        opacity: 0;
+        transition: $transition;
+      }
 
       @media screen and (max-width: $breakpoint-medium) {
         min-height: 233px;
@@ -92,7 +103,51 @@
       }
 
       @media screen and (max-width: $breakpoint-small) {
-        display: none;
+        max-height: none;
+        height: 100%;
+        min-height: 125px;
+        display: block;
+      }
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      text-align: left;
+      z-index: 2;
+      color: $color-background;
+      line-height: normal;
+      font-size: 18px;
+      padding: 100px 40px 40px;
+      width: 100%;
+      background-image: linear-gradient(180deg, transparent, rgba(0,0,0,.8));
+      text-shadow: 0px 1px 0px rgba(0,0,0,.26);
+      // text-transform: none;
+
+      @media screen and (max-width: $breakpoint-medium-large) {
+        padding: 60px 25px 25px;
+      }
+
+      p {
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: normal;
+        margin-bottom: .5em;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .125em;
+
+        @media screen and (max-width: $breakpoint-medium-large) {
+          font-size: 21px;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+          font-size: 18px;
+        }
       }
     }
 
@@ -100,9 +155,14 @@
       display: block;
       position: absolute;
       left: 50%;
-      bottom: 33px;
-      transform: translateX(-50%);
+      top: 50%;
+      transform: translate(-50%,-50%);
       transition: $transition;
+      z-index: 1;
+
+      @media screen and (max-width: $breakpoint-small) {
+        display: none;
+      }
     }
 
     h4 {
@@ -151,8 +211,12 @@
       }
 
       figure {
+        &::after {
+          opacity: 1;
+        }
+
         img {
-          bottom: 45px;
+          transform: translate(-50%,calc(-50% - 10px));
         }
       }
     }

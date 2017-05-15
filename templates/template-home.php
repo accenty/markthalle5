@@ -63,15 +63,17 @@
             $image = get_sub_field('image');
             $content = get_sub_field('content');
             $link = get_sub_field('link');
-            $colour = get_sub_field('colour');
+            $bgImage = get_sub_field('background-image');
           ?>
 
           <?php if($link): ?>
-          <a href="<?php echo $link; ?>" class="column" style="background-color: <?php echo $colour; ?>">
+          <a href="<?php echo $link; ?>" class="column" style="background-image: url('<?php echo $bgImage; ?>')">
             <figure>
               <img src="<?php echo $image; ?>" alt="">
+              <figcaption>
+                <?php echo $content; ?>
+              </figcaption>
             </figure>
-            <h4><?php echo $content; ?></h4>
           </a><!-- column -->
           <?php endif; ?>
 
@@ -111,10 +113,15 @@
 
                 <h4><?php the_title(); ?></h4>
                 <h5><?php the_field('product-type'); ?></h5>
-                <em><?php the_field('product-additional-info') ?></em>
                 <?php echo woocommerce_price($product->get_price_including_tax()); ?>
+              	<?php if( get_field('price-per-unit-price') ): ?>
+              		<span class="price-per-unit">
+              			(<?php the_field('price-per-unit-price'); ?>€ / <?php the_field('price-per-unit-unit'); ?>)
+              		</span>
+              	<?php endif; ?>
+                <em><?php the_field('product-additional-info') ?></em>
                 <button>
-                  Kaufen
+                  Details ansehen
                 </button>
               </a><!-- item -->
 
