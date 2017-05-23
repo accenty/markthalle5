@@ -2154,6 +2154,14 @@ h1 {
 .woocommerce div.product div.images .woocommerce-product-gallery__image:last-of-type {
   margin-right: 0; }
 
+.woocommerce .woocommerce-message {
+  border-top: 0; }
+  @media screen and (max-width: 560px) {
+    .woocommerce .woocommerce-message a {
+      float: none;
+      margin: 0.3em 0 1em;
+      text-align: right; } }
+
 @media screen and (max-width: 560px) {
   .woocommerce .single-product {
     padding: 0; } }

@@ -21,6 +21,18 @@
     }
   }
 
+  .woocommerce-message {
+    border-top: 0;
+
+    a {
+      @media screen and (max-width: $breakpoint-small) {
+        float: none;
+        margin: 0.3em 0 1em;
+        text-align: right;
+      }
+    }
+  }
+
   .single-product {
     @media screen and (max-width: $breakpoint-small) {
       padding: 0;
