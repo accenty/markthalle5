@@ -203,20 +203,65 @@
 
 .cat-list {
   margin-bottom: 2em;
+  position: relative;
 
   h3 {
-    display: none;
+    display: block;
+    background: $color-highlight;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: .5em .75em;
+    letter-spacing: .125em;
+    color: $color-background;
+    cursor: pointer;
+    transition: $transition;
+
+    &::after {
+      content: '\f107';
+      font-family: 'FontAwesome';
+      margin-left: .25em;
+      position: absolute;
+      right: .75em;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: $transition;
+    }
+
+    &.active {
+      background: $color-main;
+
+      &::after {
+        transform: translateY(-50%) rotateX(180deg);
+      }
+    }
   }
 
   ul {
     @extend %clearfix;
     text-align: center;
     padding: 1em 0;
+
+    @media screen and (max-width: $breakpoint-small) {
+      display: none;
+      position: absolute;
+      background: $color-main;
+      width: 100%;
+      padding: 1em 0 1em;
+      z-index: 9;
+    }
   }
 
   li {
     display: inline-block;
     margin-right: 2em;
+
+    @media screen and (max-width: $breakpoint-small) {
+      display: block;
+      margin-right: 0;
+      text-align: left;
+      padding: 0 1em;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -231,9 +276,21 @@
       padding-bottom: .25em;
       border-bottom: 2px solid transparent;
 
+      @media screen and (max-width: $breakpoint-small) {
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        color: $color-background;
+      }
+
       &:hover {
         color: $color-highlight;
         border-color: $color-highlight;
+
+        @media screen and (max-width: $breakpoint-small) {
+          color: $color-background;
+          border-color: transparent;
+        }
       }
     }
   }

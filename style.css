@@ -2028,15 +2028,55 @@ h1 {
       margin-right: .25em; }
 
 .cat-list {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  position: relative; }
   .cat-list h3 {
-    display: none; }
+    display: block;
+    background: #a82e37;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: .5em .75em;
+    letter-spacing: .125em;
+    color: #efeeed;
+    cursor: pointer;
+    transition: all 0.3s ease; }
+    .cat-list h3::after {
+      content: '\f107';
+      font-family: 'FontAwesome';
+      margin-left: .25em;
+      position: absolute;
+      right: .75em;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      transition: all 0.3s ease; }
+    .cat-list h3.active {
+      background: #202020; }
+      .cat-list h3.active::after {
+        -webkit-transform: translateY(-50%) rotateX(180deg);
+        transform: translateY(-50%) rotateX(180deg); }
   .cat-list ul {
     text-align: center;
     padding: 1em 0; }
+    @media screen and (max-width: 560px) {
+      .cat-list ul {
+        display: none;
+        position: absolute;
+        background: #202020;
+        width: 100%;
+        padding: 1em 0 1em;
+        z-index: 9; } }
   .cat-list li {
     display: inline-block;
     margin-right: 2em; }
+    @media screen and (max-width: 560px) {
+      .cat-list li {
+        display: block;
+        margin-right: 0;
+        text-align: left;
+        padding: 0 1em; } }
     .cat-list li:last-child {
       margin-right: 0; }
     .cat-list li a {
@@ -2047,9 +2087,19 @@ h1 {
       letter-spacing: .1em;
       padding-bottom: .25em;
       border-bottom: 2px solid transparent; }
+      @media screen and (max-width: 560px) {
+        .cat-list li a {
+          font-size: 16px;
+          display: block;
+          width: 100%;
+          color: #efeeed; } }
       .cat-list li a:hover {
         color: #a82e37;
         border-color: #a82e37; }
+        @media screen and (max-width: 560px) {
+          .cat-list li a:hover {
+            color: #efeeed;
+            border-color: transparent; } }
 
 .woocommerce .woocommerce-breadcrumb {
   margin: 2em 0;

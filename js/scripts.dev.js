@@ -20,6 +20,7 @@
 		hamburger();
 		fadeInProducts();
 		productDetailImageSwitcher();
+		productArchiveToggle();
 	});
 
 	function hamburger() {
@@ -29,6 +30,13 @@
 			$('.page-wrap').toggleClass('show-nav');
 			$('.off-canvas').toggleClass('show-nav');
 			$('.header').toggleClass('show-nav');
+		});
+	}
+
+	function productArchiveToggle() {
+		$('.toggle-cat-list').click(function(){
+			$(this).toggleClass('active');
+			$('.cat-list ul').slideToggle('fast');
 		});
 	}
 
