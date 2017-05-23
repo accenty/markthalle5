@@ -1302,7 +1302,8 @@ button {
       z-index: 1; }
       @media screen and (max-width: 560px) {
         .assortment-container .column img {
-          display: none; } }
+          left: auto;
+          right: -10%; } }
     .assortment-container .column h4 {
       font-size: 21px;
       text-transform: uppercase;

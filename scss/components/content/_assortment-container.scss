@@ -161,7 +161,8 @@
       z-index: 1;
 
       @media screen and (max-width: $breakpoint-small) {
-        display: none;
+        left: auto;
+        right: -10%;
       }
     }
 
