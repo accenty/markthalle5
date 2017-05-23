@@ -104,14 +104,18 @@
 
           $loop = new WP_Query( $args );
           while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
-              <a class="item" href="<?php the_permalink(); ?>">
+              <div class="item">
                 <?php if(get_field('product-image')): ?>
                   <figure>
                     <img src="<?php the_field('product-image'); ?>" alt="<?php the_title(); ?>">
                   </figure>
                 <?php endif; ?>
 
-                <h4><?php the_title(); ?></h4>
+                <h4>
+                  <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?>
+                  </a>
+                </h4>
                 <h5><?php the_field('product-type'); ?></h5>
                 <?php echo woocommerce_price($product->get_price_including_tax()); ?>
               	<?php if( get_field('price-per-unit-price') ): ?>
@@ -120,10 +124,8 @@
               		</span>
               	<?php endif; ?>
                 <em><?php the_field('product-additional-info') ?></em>
-                <button>
-                  Details ansehen
-                </button>
-              </a><!-- item -->
+                <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
+              </div><!-- item -->
 
           <?php
               endwhile;

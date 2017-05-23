@@ -66,6 +66,104 @@
         bottom: -34px;
       }
     }
+
+    a {
+      &.button {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: .15em;
+        margin: 2em 0 0 0;
+        display: block;
+        position: relative;
+        background: transparent;
+        color: $color-neutral-1;
+        padding: 0;
+
+        &:hover {
+          background: transparent;
+          color: $color-font-dark;
+        }
+
+        &::before {
+          content: '\f217';
+          font-family: 'FontAwesome';
+          margin-right: .25em;
+        }
+
+        &.added {
+          color: $color-cart-positive;
+
+          &::after {
+            content: '\f00c';
+            font-family: 'FontAwesome';
+          }
+        }
+
+        &.loading {
+          opacity: 1;
+          color: $color-font-dark;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            font-size: 14px;
+            display: block;
+            line-height: 1;
+            width: 14px;
+            height: 14px;
+            text-align: center;
+            padding-left: 2px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            top: 3px;
+            right: 14%;
+            font-family: 'FontAwesome';
+            content: '\f013';
+            animation: none;
+            animation: spin 1.5s linear infinite;
+
+            @keyframes spin {
+              0% {
+                transform: rotate(0);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+          }
+        }
+
+        &.wc-backward {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      &.added_to_cart {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: .15em;
+        margin: .5em 0 0em 0;
+        display: block;
+        background: transparent;
+        color: $color-font-dark;
+        padding: 0;
+
+        &:hover {
+          color: $color-highlight;
+        }
+
+        &::after {
+          display: inline-block;
+          content: '\f105';
+          font-family: 'FontAwesome';
+          margin-left: .5em;
+        }
+      }
+    }
   }
 
   h4 {
@@ -74,6 +172,20 @@
     color: $color-neutral-brightest;
     margin-bottom: 10px;
     font-weight: 700;
+
+    a {
+      color: $color-neutral-1;
+
+      &::after {
+        content: '\f105';
+        font-family: 'FontAwesome';
+        margin-left: .25em;
+      }
+
+      &:hover {
+        color: $color-background;
+      }
+    }
 
     @media screen and (max-width: $breakpoint-medium-large) {
       font-size: 21px;
