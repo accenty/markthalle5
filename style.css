@@ -1898,7 +1898,7 @@ h1 {
   flex-wrap: wrap; }
 
 .product-archive .product--small {
-  width: calc(25% - 11.3px);
+  width: calc((100% / 4) - ((3 * 15px) / 4));
   margin-right: 15px;
   margin-bottom: 20px;
   background: #fff;
@@ -1910,10 +1910,10 @@ h1 {
   transition: all 0.3s ease; }
   @media screen and (max-width: 1024px) {
     .product-archive .product--small {
-      width: calc(33% - 6.9px); } }
+      width: calc((100% / 3) - ((2 * 15px) / 3)); } }
   @media screen and (max-width: 768px) {
     .product-archive .product--small {
-      width: calc(50% - 7.5px); } }
+      width: calc((100% / 2) - ((1 * 15px) / 2)); } }
   @media screen and (max-width: 560px) {
     .product-archive .product--small {
       width: 100%;
