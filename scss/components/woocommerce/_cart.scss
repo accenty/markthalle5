@@ -17,7 +17,8 @@
   }
 
   .woocommerce-info,
-  .woocommerce-message {
+  .woocommerce-message,
+  .free-shipping {
     display: none;
 
     border-top: 0;
@@ -31,11 +32,37 @@
     }
   }
 
+
   .woocommerce-message {
     display: none;
 
     &::before {
       content: '\f00d';
+    }
+  }
+
+  .free-shipping,
+  .free-shipping-available {
+    display: block;
+    background: $color-highlight;
+    color: $color-background;
+    margin-bottom: 0;
+
+    &::before {
+      color: $color-background;
+      content: '\f06a';
+    }
+
+    .amount {
+      border-bottom: 1px dotted rgba($color-background,.5);
+    }
+  }
+
+  .free-shipping-available {
+    background: $color-cart-positive;
+
+    &::before {
+      content: '\f058';
     }
   }
 
