@@ -1585,7 +1585,9 @@ button {
     transform: translateY(-50%); }
     @media screen and (max-width: 1024px) {
       .featured-products-container img {
-        display: none; } }
+        display: block;
+        right: 0.125em;
+        max-height: 250px; } }
 
 .about-wrapper {
   padding: 60px 0; }

@@ -292,7 +292,9 @@
     transform: translateY(-50%);
 
     @media screen and (max-width: $breakpoint-medium-large) {
-      display: none;
+      display: block;
+      right: 0.125em;
+      max-height: 250px;
     }
   }
 }
