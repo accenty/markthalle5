@@ -2963,6 +2963,101 @@ h1 {
       background: transparent;
       color: #a82e37; }
 
+.woocommerce-order-received .woocommerce-notice {
+  font-size: 24px;
+  padding: 1.5em 0;
+  margin-bottom: 1em;
+  color: #a82e37;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .125em; }
+  @media screen and (max-width: 1024px) {
+    .woocommerce-order-received .woocommerce-notice {
+      font-size: 21px; } }
+  @media screen and (max-width: 768px) {
+    .woocommerce-order-received .woocommerce-notice {
+      font-size: 18px; } }
+  .woocommerce-order-received .woocommerce-notice::after {
+    content: '\f058';
+    font-family: 'FontAwesome';
+    margin-left: .5em; }
+
+@media screen and (max-width: 768px) {
+  .woocommerce-order-received .woocommerce-table--order-details {
+    font-size: 14px; } }
+
+.woocommerce-order-received ul.order_details {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1em;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); }
+  @media screen and (max-width: 1024px) {
+    .woocommerce-order-received ul.order_details {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+  .woocommerce-order-received ul.order_details::before, .woocommerce-order-received ul.order_details::after {
+    display: none; }
+  .woocommerce-order-received ul.order_details li {
+    border: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+    margin: 0; }
+    @media screen and (max-width: 1024px) {
+      .woocommerce-order-received ul.order_details li {
+        width: 50%;
+        margin-bottom: 2em; }
+        .woocommerce-order-received ul.order_details li:nth-of-type(3n) {
+          margin-bottom: 0; }
+        .woocommerce-order-received ul.order_details li:nth-of-type(4n) {
+          margin-bottom: 0; } }
+    @media screen and (max-width: 560px) {
+      .woocommerce-order-received ul.order_details li {
+        width: 100%;
+        margin-bottom: 1.5em; }
+        .woocommerce-order-received ul.order_details li:nth-of-type(3n) {
+          margin-bottom: 1.5em; } }
+    .woocommerce-order-received ul.order_details li strong {
+      font-size: 21px;
+      font-weight: 300;
+      color: #333333; }
+      @media screen and (max-width: 1024px) {
+        .woocommerce-order-received ul.order_details li strong {
+          font-size: 18px; } }
+      @media screen and (max-width: 1024px) {
+        .woocommerce-order-received ul.order_details li strong {
+          font-size: 16px;
+          font-weight: 400; } }
+
+.woocommerce-order-received .woocommerce-order-details h2 {
+  font-size: 18px;
+  padding: .5em 0;
+  margin-bottom: 1em;
+  color: #a82e37;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .125em; }
+  @media screen and (max-width: 1024px) {
+    .woocommerce-order-received .woocommerce-order-details h2 {
+      font-size: 16px; } }
+
+.woocommerce-order-received .woocommerce-columns--addresses {
+  background: #fff;
+  padding: 1em;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); }
+  .woocommerce-order-received .woocommerce-columns--addresses h3 {
+    text-transform: uppercase;
+    letter-spacing: .125em;
+    margin: 0;
+    margin-bottom: 1em; }
+
 .search main {
   padding: 3em 0; }
 
