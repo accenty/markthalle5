@@ -2031,7 +2031,7 @@ h1 {
   margin-bottom: 2em;
   position: relative; }
   .cat-list h3 {
-    display: block;
+    display: none;
     background: #a82e37;
     text-align: left;
     text-transform: uppercase;
@@ -2041,6 +2041,9 @@ h1 {
     color: #efeeed;
     cursor: pointer;
     transition: all 0.3s ease; }
+    @media screen and (max-width: 768px) {
+      .cat-list h3 {
+        display: block; } }
     .cat-list h3::after {
       content: '\f107';
       font-family: 'FontAwesome';
@@ -2158,7 +2161,7 @@ h1 {
   border-top: 0; }
   @media screen and (max-width: 560px) {
     .woocommerce .woocommerce-message a {
-      float: none;
+      float: none !important;
       margin: 0.3em 0 1em;
       text-align: right; } }
 

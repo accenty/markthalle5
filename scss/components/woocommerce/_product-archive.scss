@@ -206,7 +206,7 @@
   position: relative;
 
   h3 {
-    display: block;
+    display: none;
     background: $color-highlight;
     text-align: left;
     text-transform: uppercase;
@@ -216,6 +216,10 @@
     color: $color-background;
     cursor: pointer;
     transition: $transition;
+
+    @media screen and (max-width: $breakpoint-medium) {
+      display: block;
+    }
 
     &::after {
       content: '\f107';
