@@ -15,9 +15,9 @@
 
     <div class="loop-content">
       <!-- post title -->
-      <h2>
+      <h3>
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-      </h2>
+      </h3>
       <!-- /post title -->
 
       <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
@@ -34,7 +34,7 @@
 
 	<!-- article -->
 	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+		<h3><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h3>
 	</article>
 	<!-- /article -->
 
