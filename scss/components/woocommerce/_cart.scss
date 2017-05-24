@@ -43,10 +43,18 @@
 
   .free-shipping,
   .free-shipping-available {
-    display: block;
+    display: none;
     background: $color-highlight;
     color: $color-background;
     margin-bottom: 0;
+
+    @media screen and (max-width: $breakpoint-small) {
+      margin-bottom: 10px;
+    }
+
+    &:last-of-type {
+      display: block;
+    }
 
     &::before {
       color: $color-background;
@@ -78,6 +86,12 @@
     @media screen and (max-width: $breakpoint-medium) {
       width: 100%;
       float: none;
+    }
+
+    .product-remove {
+      @media screen and (max-width: $breakpoint-small) {
+        padding: .5em;
+      }
     }
   }
 
@@ -112,6 +126,29 @@
       &[disabled] {
         pointer-events: none;
         color: $color-neutral-brightest;
+      }
+    }
+
+    .actions {
+      .coupon {
+        @media screen and (max-width: $breakpoint-small) {
+          margin-bottom: 0;
+        }
+
+        input[type="text"] {
+          @media screen and (max-width: $breakpoint-small) {
+            width: 100%;
+            float: none;
+          }
+        }
+
+        input[type="submit"] {
+          @media screen and (max-width: $breakpoint-small) {
+            width: 100%;
+            float: none;
+            margin-top: 10px;
+          }
+        }
       }
     }
 
@@ -271,6 +308,10 @@
           text-transform: uppercase;
           letter-spacing: .125em;
           line-height: normal;
+
+          @media screen and (max-width: $breakpoint-small) {
+            font-size: 12px;
+          }
         }
       }
 
@@ -297,6 +338,10 @@
         td {
           font-size: 24px;
           color: $color-highlight;
+
+          @media screen and (max-width: $breakpoint-small) {
+            font-size: 16px;
+          }
         }
       }
 

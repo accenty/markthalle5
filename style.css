@@ -2649,10 +2649,17 @@ h1 {
 
 .woocommerce-cart .free-shipping,
 .woocommerce-cart .free-shipping-available {
-  display: block;
+  display: none;
   background: #a82e37;
   color: #efeeed;
   margin-bottom: 0; }
+  @media screen and (max-width: 560px) {
+    .woocommerce-cart .free-shipping,
+    .woocommerce-cart .free-shipping-available {
+      margin-bottom: 10px; } }
+  .woocommerce-cart .free-shipping:last-of-type,
+  .woocommerce-cart .free-shipping-available:last-of-type {
+    display: block; }
   .woocommerce-cart .free-shipping::before,
   .woocommerce-cart .free-shipping-available::before {
     color: #efeeed;
@@ -2677,6 +2684,9 @@ h1 {
     .woocommerce-cart .woocommerce-cart-form {
       width: 100%;
       float: none; } }
+  @media screen and (max-width: 560px) {
+    .woocommerce-cart .woocommerce-cart-form .product-remove {
+      padding: .5em; } }
 
 .woocommerce-cart table.shop_table {
   border-radius: 0;
@@ -2703,6 +2713,18 @@ h1 {
     .woocommerce-cart table.shop_table .button[disabled] {
       pointer-events: none;
       color: #fff; }
+  @media screen and (max-width: 560px) {
+    .woocommerce-cart table.shop_table .actions .coupon {
+      margin-bottom: 0; } }
+  @media screen and (max-width: 560px) {
+    .woocommerce-cart table.shop_table .actions .coupon input[type="text"] {
+      width: 100%;
+      float: none; } }
+  @media screen and (max-width: 560px) {
+    .woocommerce-cart table.shop_table .actions .coupon input[type="submit"] {
+      width: 100%;
+      float: none;
+      margin-top: 10px; } }
   .woocommerce-cart table.shop_table thead {
     color: #333333;
     text-transform: uppercase;
@@ -2807,6 +2829,9 @@ h1 {
       text-transform: uppercase;
       letter-spacing: .125em;
       line-height: normal; }
+      @media screen and (max-width: 560px) {
+        .woocommerce-cart .cart-collaterals .cart_totals table small {
+          font-size: 12px; } }
     .woocommerce-cart .cart-collaterals .cart_totals .cart-subtotal td {
       font-weight: 700; }
       .woocommerce-cart .cart-collaterals .cart_totals .cart-subtotal td small {
@@ -2819,6 +2844,9 @@ h1 {
     .woocommerce-cart .cart-collaterals .cart_totals .order-total td {
       font-size: 24px;
       color: #a82e37; }
+      @media screen and (max-width: 560px) {
+        .woocommerce-cart .cart-collaterals .cart_totals .order-total td {
+          font-size: 16px; } }
     .woocommerce-cart .cart-collaterals .cart_totals .woocommerce-shipping-calculator p {
       margin: 0;
       padding: 0; }
