@@ -507,7 +507,7 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'my_header_add_to_cart_fragment
  * @param array $rates Array of rates found for the package.
  * @return array
  */
- 
+
 function my_hide_shipping_when_free_is_available( $rates ) {
 	$free = array();
 	foreach ( $rates as $rate_id => $rate ) {
@@ -519,5 +519,11 @@ function my_hide_shipping_when_free_is_available( $rates ) {
 	return ! empty( $free ) ? $free : $rates;
 }
 add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
+
+//Disabling AJAX for Cart Page..
+function cart_script_disabled(){
+	wp_dequeue_script( 'wc-cart' );
+}
+add_action( 'wp_enqueue_scripts', 'cart_script_disabled' );
 
 ?>

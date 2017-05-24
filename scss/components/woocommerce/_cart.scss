@@ -43,17 +43,13 @@
 
   .free-shipping,
   .free-shipping-available {
-    display: none;
+    display: block;
     background: $color-highlight;
     color: $color-background;
     margin-bottom: 0;
 
     @media screen and (max-width: $breakpoint-small) {
       margin-bottom: 10px;
-    }
-
-    &:last-of-type {
-      display: block;
     }
 
     &::before {

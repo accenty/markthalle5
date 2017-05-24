@@ -2649,7 +2649,7 @@ h1 {
 
 .woocommerce-cart .free-shipping,
 .woocommerce-cart .free-shipping-available {
-  display: none;
+  display: block;
   background: #a82e37;
   color: #efeeed;
   margin-bottom: 0; }
@@ -2657,9 +2657,6 @@ h1 {
     .woocommerce-cart .free-shipping,
     .woocommerce-cart .free-shipping-available {
       margin-bottom: 10px; } }
-  .woocommerce-cart .free-shipping:last-of-type,
-  .woocommerce-cart .free-shipping-available:last-of-type {
-    display: block; }
   .woocommerce-cart .free-shipping::before,
   .woocommerce-cart .free-shipping-available::before {
     color: #efeeed;
