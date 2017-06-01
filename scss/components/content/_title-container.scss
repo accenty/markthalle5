@@ -11,6 +11,7 @@
   @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
     height: 75vh;
     background-position: top center;
+    background-attachment: inherit;
   }
 
   .content-wrap {

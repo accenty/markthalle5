@@ -520,7 +520,8 @@ function my_hide_shipping_when_free_is_available( $rates ) {
 }
 add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
 
-//Disabling AJAX for Cart Page..
+// Disabling AJAX for Cart Page..
+
 function cart_script_disabled(){
 	wp_dequeue_script( 'wc-cart' );
 }
