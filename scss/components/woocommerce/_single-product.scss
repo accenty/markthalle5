@@ -2,7 +2,7 @@
 
   div.product {
     div.images {
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-bottom: 0;
       }
 
@@ -25,7 +25,7 @@
     border-top: 0;
 
     a {
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         float: none !important;
         margin: 0.3em 0 1em;
         text-align: right;
@@ -34,7 +34,7 @@
   }
 
   .single-product {
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       padding: 0;
     }
 
@@ -145,7 +145,7 @@
           font-size: 14px;
           color: $color-font;
 
-          @media screen and (max-width: $breakpoint-small) {
+          @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
             font-size: 12px;
           }
         }
@@ -178,7 +178,7 @@
           width: 20%;
         }
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
           width: 15%;
         }
       }
@@ -334,7 +334,7 @@
 
     .related {
       &.products {
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
           padding: 0px 24px;
         }
 
@@ -350,7 +350,7 @@
             font-size: 21px;
           }
 
-          @media screen and (max-width: $breakpoint-small) {
+          @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
             font-size: 18px;
           }
         }
@@ -379,7 +379,7 @@
             width: calc(50% - 7.5px);
           }
 
-          @media screen and (max-width: $breakpoint-small) {
+          @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
             width: 100%;
             margin-right: 0;
           }
@@ -394,7 +394,7 @@
               margin-right: 0;
             }
 
-            @media screen and (max-width: $breakpoint-small) {
+            @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
               margin-right: 0;
             }
           }
@@ -408,7 +408,7 @@
               margin-right: 15px;
             }
 
-            @media screen and (max-width: $breakpoint-small) {
+            @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
               margin-right: 0;
             }
           }
@@ -424,7 +424,7 @@
               margin-right: 0;
             }
 
-            @media screen and (max-width: $breakpoint-small) {
+            @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
               margin-right: 0;
             }
           }
@@ -439,7 +439,7 @@
               margin-right: 0;
             }
 
-            @media screen and (max-width: $breakpoint-small) {
+            @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
               margin-right: 0;
             }
           }
@@ -449,7 +449,7 @@
               margin-right: 0;
             }
 
-            @media screen and (max-width: $breakpoint-small) {
+            @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
               margin-right: 0;
             }
           }

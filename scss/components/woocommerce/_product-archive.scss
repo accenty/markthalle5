@@ -38,7 +38,7 @@
       width: calc((100% / 2) - ((1 * 15px) / 2));
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       width: 100%;
       margin-right: 0;
     }
@@ -53,7 +53,7 @@
         margin-right: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -67,7 +67,7 @@
         margin-right: 15px;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -83,7 +83,7 @@
         margin-right: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -98,7 +98,7 @@
         margin-right: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -108,7 +108,7 @@
         margin-right: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -246,7 +246,7 @@
     text-align: center;
     padding: 1em 0;
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-medium) {
       display: none;
       position: absolute;
       background: $color-main;
@@ -260,7 +260,7 @@
     display: inline-block;
     margin-right: 2em;
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-medium) {
       display: block;
       margin-right: 0;
       text-align: left;
@@ -280,7 +280,7 @@
       padding-bottom: .25em;
       border-bottom: 2px solid transparent;
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-medium) {
         font-size: 16px;
         display: block;
         width: 100%;
@@ -291,7 +291,7 @@
         color: $color-highlight;
         border-color: $color-highlight;
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-medium) {
           color: $color-background;
           border-color: transparent;
         }

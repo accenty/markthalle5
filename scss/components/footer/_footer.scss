@@ -130,7 +130,7 @@
         padding-bottom: 45px;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         padding: 0;
         width: 100%;
         padding-bottom: 15px;
@@ -160,14 +160,14 @@
         left: -45px;
         background: $color-background;
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
           display: none;
         }
       }
     }
 
     p {
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         font-size: 14px;
       }
     }
@@ -223,7 +223,7 @@
         margin-top: 2px;
         float: left;
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
           float: none;
           width: 100%;
           display: block;
@@ -282,12 +282,14 @@
   height: 50px;
   border-radius: 50%;
   background: $color-highlight;
-  bottom: -100%;
+  bottom: 1em;
   right: 1em;
+  transform: scale(0);
   color: $color-background;
   box-shadow: 0px 2px 5px rgba($color-neutral-darkest,.25);
+  z-index: 10000;
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
     width: 35px;
     height: 35px;
     font-size: 18px;
@@ -299,7 +301,7 @@
   }
 
   &.visible {
-    bottom: 1em;
+    transform: scale(1);
   }
 
   &::before {

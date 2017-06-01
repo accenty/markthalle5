@@ -51,7 +51,7 @@
       width: calc((100% / 2) - ((1 * 15px) / 2));
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       width: 100%;
       margin-right: 0;
     }
@@ -70,7 +70,7 @@
         margin-right: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -84,7 +84,7 @@
         margin-right: 15px;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -100,7 +100,7 @@
         margin-right: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -115,7 +115,7 @@
         margin-right: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }
@@ -125,7 +125,7 @@
         margin-right: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         margin-right: 0;
       }
     }

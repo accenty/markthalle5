@@ -705,7 +705,7 @@ a {
   max-width: 1260px;
   padding: 0 30px;
   margin: auto; }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .content-wrap {
       padding: 0 24px; } }
 
@@ -722,12 +722,12 @@ a {
   @media screen and (max-width: 1024px) {
     .page-wrap {
       padding-top: 105px; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .page-wrap {
       padding-top: 62px; } }
   .page-wrap.show-nav {
     left: -50%; }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .page-wrap.show-nav {
         left: -70%; } }
 
@@ -746,12 +746,12 @@ button {
   left: 0;
   width: 100%;
   padding: 97px 0;
-  z-index: 9;
+  z-index: 1000;
   transition: left .3s ease; }
   @media screen and (max-width: 1024px) {
     .header {
       padding: 30px 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .header {
       padding: 10px 0;
       position: fixed; } }
@@ -773,14 +773,14 @@ button {
     -webkit-animation: slideFromTop .3s ease forwards;
     animation: slideFromTop .3s ease forwards;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .header.sticky {
         -webkit-animation: none;
         animation: none;
         padding: 10px 0; } }
   .header.show-nav {
     left: -50%; }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .header.show-nav {
         left: -70%; } }
 
@@ -821,7 +821,7 @@ button {
   @media screen and (max-width: 768px) {
     .logo {
       margin: 0 auto; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .logo {
       width: 135px;
       height: 15px; } }
@@ -994,7 +994,7 @@ button {
   padding: 0 0;
   transition: all 0.3s ease;
   z-index: 9; }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .off-canvas {
       width: 70%;
       right: -70%; } }
@@ -1012,7 +1012,7 @@ button {
         margin: 0;
         font-size: 16px;
         border-bottom: 0; }
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
           .off-canvas .main-nav li a {
             font-size: 14px;
             padding: 12px 18px; } }
@@ -1027,7 +1027,7 @@ button {
       color: #fff;
       width: 100%;
       display: block; }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .off-canvas .cart-nav a {
           font-size: 14px;
           padding: 12px 18px; } }
@@ -1035,7 +1035,7 @@ button {
     width: 100%;
     padding: 30px 10px 30px 24px;
     background: #1b1b1b; }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .off-canvas .search-wrap {
         padding: 4px 3px 13px 18px; } }
   .off-canvas .search-input {
@@ -1044,7 +1044,7 @@ button {
     margin-left: 0;
     max-width: none;
     font-size: 14px; }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .off-canvas .search-input {
         font-size: 12px; } }
   .off-canvas.show-nav {
@@ -1055,12 +1055,14 @@ button {
   overflow: hidden;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   color: #fff;
   position: relative; }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .title-container {
-      height: 55vh; } }
+      height: 75vh;
+      background-position: top center; } }
   .title-container .content-wrap {
     height: 100%; }
   .title-container .inner-wrap {
@@ -1076,7 +1078,7 @@ button {
       .title-container .inner-wrap {
         height: calc(100% - 106px);
         max-width: none; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .title-container .inner-wrap {
         height: calc(100% - 66px);
         max-width: none; } }
@@ -1089,7 +1091,7 @@ button {
         .title-container .inner-wrap > div {
           width: 60%;
           max-width: none; } }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .title-container .inner-wrap > div {
           width: 100%;
           max-width: none; } }
@@ -1116,7 +1118,8 @@ button {
         font-size: 16px; } }
     @media screen and (max-width: 768px) {
       .title-container p {
-        font-size: 14px; } }
+        font-size: 14px;
+        line-height: 1.5em; } }
   .title-container .product-image {
     position: absolute;
     top: 50%;
@@ -1132,7 +1135,7 @@ button {
         width: 80%;
         right: -35%;
         opacity: .5; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .title-container .product-image {
         width: 80%;
         right: -45%;
@@ -1156,7 +1159,7 @@ button {
     @media screen and (max-width: 768px) {
       .title-container .shop-cta {
         font-size: 24px; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .title-container .shop-cta {
         font-size: 18px;
         padding: 20px 0; } }
@@ -1199,7 +1202,7 @@ button {
     @media screen and (max-width: 1024px) {
       .assortment-container p {
         font-size: 16px; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .assortment-container p {
         font-size: 14px;
         line-height: 1.6em; } }
@@ -1208,7 +1211,7 @@ button {
     @media screen and (max-width: 768px) {
       .assortment-container .column-wrap {
         margin-top: 80px; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .assortment-container .column-wrap {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -1227,7 +1230,7 @@ button {
       .assortment-container .column {
         min-height: 350px;
         margin-right: 10px; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .assortment-container .column {
         min-height: 0;
         margin-right: 0;
@@ -1253,7 +1256,7 @@ button {
         .assortment-container .column figure {
           min-height: 233px;
           margin-right: 0; } }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .assortment-container .column figure {
           max-height: none;
           height: 100%;
@@ -1300,7 +1303,7 @@ button {
       transform: translate(-50%, -50%);
       transition: all 0.3s ease;
       z-index: 1; }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .assortment-container .column img {
           left: auto;
           right: -10%; } }
@@ -1319,7 +1322,7 @@ button {
       @media screen and (max-width: 768px) {
         .assortment-container .column h4 {
           font-size: 16px; } }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .assortment-container .column h4 {
           padding: .8em 1em; } }
       .assortment-container .column h4::after {
@@ -1333,7 +1336,7 @@ button {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%); }
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
           .assortment-container .column h4::after {
             display: inline-block; } }
     .assortment-container .column:hover {
@@ -1350,14 +1353,15 @@ button {
 .featured-products-container {
   padding: 173px 0 53px;
   background: url("img/blur-bg.jpg");
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   @media screen and (max-width: 1024px) {
     .featured-products-container {
       padding: 133px 0 13px; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .featured-products-container {
       padding: 30px 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .featured-products-container .column-wrap {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
@@ -1390,13 +1394,14 @@ button {
       .featured-products-container .item {
         padding: 1.5em 1em 1em;
         margin-right: 10px; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .featured-products-container .item {
         border-left: 2px solid #fff;
         text-align: left;
         padding: 1em;
         margin-bottom: 10px;
-        margin-right: 0; } }
+        margin-right: 0;
+        overflow: hidden; } }
     .featured-products-container .item:last-of-type {
       margin-right: 0; }
     .featured-products-container .item:hover button {
@@ -1502,7 +1507,7 @@ button {
     @media screen and (max-width: 1024px) {
       .featured-products-container h4 {
         font-size: 21px; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .featured-products-container h4 {
         margin-bottom: 0;
         font-size: 18px; } }
@@ -1520,11 +1525,13 @@ button {
     display: block;
     margin: 0;
     margin-top: 31px;
-    color: #fff; }
+    color: #fff;
+    position: relative;
+    z-index: 10; }
     @media screen and (max-width: 1024px) {
       .featured-products-container em {
         font-size: 16px; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .featured-products-container em {
         width: 100%;
         padding: 0;
@@ -1541,7 +1548,7 @@ button {
     @media screen and (max-width: 768px) {
       .featured-products-container .amount {
         font-size: 24px; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .featured-products-container .amount {
         font-size: 21px;
         text-align: left;
@@ -1570,7 +1577,7 @@ button {
     @media screen and (max-width: 1024px) {
       .featured-products-container button {
         width: 100%; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .featured-products-container button {
         margin-top: 2em;
         font-size: 14px;
@@ -1586,7 +1593,7 @@ button {
     @media screen and (max-width: 1024px) {
       .featured-products-container img {
         display: block;
-        right: 0.125em;
+        right: -3.475em;
         max-height: 250px; } }
 
 .about-wrapper {
@@ -1630,7 +1637,7 @@ button {
     @media screen and (max-width: 768px) {
       .about-wrapper .column-wrap p {
         margin: .5em 0; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .about-wrapper .column-wrap p {
         font-size: 14px; } }
     .about-wrapper .column-wrap p:first-of-type {
@@ -1666,7 +1673,7 @@ button {
           width: 100%;
           float: none;
           margin-top: 0; } }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .about-wrapper .featured-container .feature-description {
           font-size: 14px;
           padding: 1.5em; } }
@@ -1685,7 +1692,7 @@ button {
         .about-wrapper .featured-container .feature-meta {
           width: 100%;
           float: none; } }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .about-wrapper .featured-container .feature-meta {
           font-size: 14px;
           padding: 1.5em; } }
@@ -1697,7 +1704,7 @@ button {
         letter-spacing: .125em;
         font-weight: 700;
         color: #999999; }
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
           .about-wrapper .featured-container .feature-meta em {
             font-size: 12px; } }
       .about-wrapper .featured-container .feature-meta strong {
@@ -1806,6 +1813,29 @@ h1 {
 .contact-form .div.wpcf7-response-output {
   margin: 0;
   padding: 1em; }
+
+.page-template-template-about h2,
+.page-template-template-about h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .125em;
+  color: #999999;
+  margin-bottom: 1em; }
+  @media screen and (max-width: 768px) {
+    .page-template-template-about h2,
+    .page-template-template-about h3 {
+      font-size: 18px; } }
+
+.page-template-template-about h3 {
+  font-size: 18px; }
+  @media screen and (max-width: 768px) {
+    .page-template-template-about h3 {
+      font-size: 16px; } }
+
+.page-template-template-about p {
+  margin-bottom: 1em;
+  line-height: 1.5em; }
 
 .woocommerce a.button {
   text-transform: uppercase;
@@ -1917,7 +1947,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .product-archive .product--small {
       width: calc((100% / 2) - ((1 * 15px) / 2)); } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .product-archive .product--small {
       width: 100%;
       margin-right: 0; } }
@@ -1929,7 +1959,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .product-archive .product--small:nth-of-type(2n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .product-archive .product--small:nth-of-type(2n) {
       margin-right: 0; } }
   @media screen and (max-width: 1024px) {
@@ -1938,7 +1968,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .product-archive .product--small:nth-of-type(3n) {
       margin-right: 15px; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .product-archive .product--small:nth-of-type(3n) {
       margin-right: 0; } }
   .product-archive .product--small:nth-of-type(4n) {
@@ -1949,7 +1979,7 @@ h1 {
     @media screen and (max-width: 768px) {
       .product-archive .product--small:nth-of-type(4n) {
         margin-right: 0; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .product-archive .product--small:nth-of-type(4n) {
         margin-right: 0; } }
   @media screen and (max-width: 1024px) {
@@ -1958,13 +1988,13 @@ h1 {
   @media screen and (max-width: 768px) {
     .product-archive .product--small:nth-of-type(6n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .product-archive .product--small:nth-of-type(6n) {
       margin-right: 0; } }
   @media screen and (max-width: 1024px) {
     .product-archive .product--small:nth-of-type(12n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .product-archive .product--small:nth-of-type(12n) {
       margin-right: 0; } }
   .product-archive .product--small figure {
@@ -2063,7 +2093,7 @@ h1 {
   .cat-list ul {
     text-align: center;
     padding: 1em 0; }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 768px) {
       .cat-list ul {
         display: none;
         position: absolute;
@@ -2074,7 +2104,7 @@ h1 {
   .cat-list li {
     display: inline-block;
     margin-right: 2em; }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 768px) {
       .cat-list li {
         display: block;
         margin-right: 0;
@@ -2090,7 +2120,7 @@ h1 {
       letter-spacing: .1em;
       padding-bottom: .25em;
       border-bottom: 2px solid transparent; }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 768px) {
         .cat-list li a {
           font-size: 16px;
           display: block;
@@ -2099,7 +2129,7 @@ h1 {
       .cat-list li a:hover {
         color: #a82e37;
         border-color: #a82e37; }
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 768px) {
           .cat-list li a:hover {
             color: #efeeed;
             border-color: transparent; } }
@@ -2109,7 +2139,7 @@ h1 {
   font-family: "Avenir", "Lato", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: #fff;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.125); }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce .woocommerce-breadcrumb {
       margin: 0 0; } }
   .woocommerce .woocommerce-breadcrumb li {
@@ -2144,7 +2174,7 @@ h1 {
       .woocommerce .woocommerce-breadcrumb li:last-of-type::after {
         display: none; }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
   .woocommerce div.product div.images {
     margin-bottom: 0; } }
 
@@ -2159,13 +2189,13 @@ h1 {
 
 .woocommerce .woocommerce-message {
   border-top: 0; }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce .woocommerce-message a {
       float: none !important;
       margin: 0.3em 0 1em;
       text-align: right; } }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
   .woocommerce .single-product {
     padding: 0; } }
 
@@ -2247,7 +2277,7 @@ h1 {
       display: block;
       font-size: 14px;
       color: #333333; }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .woocommerce .single-product .entry-summary .price-box .price-per-unit {
           font-size: 12px; } }
   .woocommerce .single-product .entry-summary .woocommerce-product-details__short-description {
@@ -2270,7 +2300,7 @@ h1 {
     @media screen and (max-width: 1024px) {
       .woocommerce .single-product .cart .quantity {
         width: 20%; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .woocommerce .single-product .cart .quantity {
         width: 15%; } }
   .woocommerce .single-product .cart input[type="number"] {
@@ -2387,7 +2417,7 @@ h1 {
         .woocommerce .single-product .additional-info .entry strong {
           font-size: 10px; } }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
   .woocommerce .single-product .related.products {
     padding: 0px 24px; } }
 
@@ -2401,7 +2431,7 @@ h1 {
   @media screen and (max-width: 1024px) {
     .woocommerce .single-product .related.products h2 {
       font-size: 21px; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce .single-product .related.products h2 {
       font-size: 18px; } }
 
@@ -2431,7 +2461,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .woocommerce .single-product .related.products .product--small {
       width: calc(50% - 7.5px); } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce .single-product .related.products .product--small {
       width: 100%;
       margin-right: 0; } }
@@ -2443,7 +2473,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .woocommerce .single-product .related.products .product--small:nth-of-type(2n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce .single-product .related.products .product--small:nth-of-type(2n) {
       margin-right: 0; } }
   @media screen and (max-width: 1024px) {
@@ -2452,7 +2482,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .woocommerce .single-product .related.products .product--small:nth-of-type(3n) {
       margin-right: 15px; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce .single-product .related.products .product--small:nth-of-type(3n) {
       margin-right: 0; } }
   .woocommerce .single-product .related.products .product--small:nth-of-type(4n) {
@@ -2463,7 +2493,7 @@ h1 {
     @media screen and (max-width: 768px) {
       .woocommerce .single-product .related.products .product--small:nth-of-type(4n) {
         margin-right: 0; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .woocommerce .single-product .related.products .product--small:nth-of-type(4n) {
         margin-right: 0; } }
   @media screen and (max-width: 1024px) {
@@ -2472,13 +2502,13 @@ h1 {
   @media screen and (max-width: 768px) {
     .woocommerce .single-product .related.products .product--small:nth-of-type(6n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce .single-product .related.products .product--small:nth-of-type(6n) {
       margin-right: 0; } }
   @media screen and (max-width: 1024px) {
     .woocommerce .single-product .related.products .product--small:nth-of-type(12n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce .single-product .related.products .product--small:nth-of-type(12n) {
       margin-right: 0; } }
   .woocommerce .single-product .related.products .product--small figure {
@@ -2653,7 +2683,7 @@ h1 {
   background: #a82e37;
   color: #efeeed;
   margin-bottom: 0; }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce-cart .free-shipping,
     .woocommerce-cart .free-shipping-available {
       margin-bottom: 10px; } }
@@ -2681,7 +2711,7 @@ h1 {
     .woocommerce-cart .woocommerce-cart-form {
       width: 100%;
       float: none; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce-cart .woocommerce-cart-form .product-remove {
       padding: .5em; } }
 
@@ -2710,14 +2740,14 @@ h1 {
     .woocommerce-cart table.shop_table .button[disabled] {
       pointer-events: none;
       color: #fff; }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce-cart table.shop_table .actions .coupon {
       margin-bottom: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce-cart table.shop_table .actions .coupon input[type="text"] {
       width: 100%;
       float: none; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .woocommerce-cart table.shop_table .actions .coupon input[type="submit"] {
       width: 100%;
       float: none;
@@ -2826,7 +2856,7 @@ h1 {
       text-transform: uppercase;
       letter-spacing: .125em;
       line-height: normal; }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .woocommerce-cart .cart-collaterals .cart_totals table small {
           font-size: 12px; } }
     .woocommerce-cart .cart-collaterals .cart_totals .cart-subtotal td {
@@ -2841,7 +2871,7 @@ h1 {
     .woocommerce-cart .cart-collaterals .cart_totals .order-total td {
       font-size: 24px;
       color: #a82e37; }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .woocommerce-cart .cart-collaterals .cart_totals .order-total td {
           font-size: 16px; } }
     .woocommerce-cart .cart-collaterals .cart_totals .woocommerce-shipping-calculator p {
@@ -3018,7 +3048,7 @@ h1 {
           margin-bottom: 0; }
         .woocommerce-order-received ul.order_details li:nth-of-type(4n) {
           margin-bottom: 0; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .woocommerce-order-received ul.order_details li {
         width: 100%;
         margin-bottom: 1.5em; }
@@ -3106,7 +3136,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .search .product {
       width: calc((100% / 2) - ((1 * 15px) / 2)); } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .search .product {
       width: 100%;
       margin-right: 0; } }
@@ -3120,7 +3150,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .search .product:nth-of-type(2n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .search .product:nth-of-type(2n) {
       margin-right: 0; } }
   @media screen and (max-width: 1024px) {
@@ -3129,7 +3159,7 @@ h1 {
   @media screen and (max-width: 768px) {
     .search .product:nth-of-type(3n) {
       margin-right: 15px; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .search .product:nth-of-type(3n) {
       margin-right: 0; } }
   .search .product:nth-of-type(4n) {
@@ -3140,7 +3170,7 @@ h1 {
     @media screen and (max-width: 768px) {
       .search .product:nth-of-type(4n) {
         margin-right: 0; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .search .product:nth-of-type(4n) {
         margin-right: 0; } }
   @media screen and (max-width: 1024px) {
@@ -3149,13 +3179,13 @@ h1 {
   @media screen and (max-width: 768px) {
     .search .product:nth-of-type(6n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .search .product:nth-of-type(6n) {
       margin-right: 0; } }
   @media screen and (max-width: 1024px) {
     .search .product:nth-of-type(12n) {
       margin-right: 0; } }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .search .product:nth-of-type(12n) {
       margin-right: 0; } }
   .search .product figure {
@@ -3286,7 +3316,7 @@ h1 {
         .footer .footer-meta .column {
           width: 50%;
           padding-bottom: 45px; } }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
         .footer .footer-meta .column {
           padding: 0;
           width: 100%;
@@ -3311,10 +3341,10 @@ h1 {
         top: 4px;
         left: -45px;
         background: #efeeed; }
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
           .footer .footer-meta h5::before {
             display: none; } }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
       .footer .footer-meta p {
         font-size: 14px; } }
     .footer .footer-meta small {
@@ -3350,7 +3380,7 @@ h1 {
         margin-left: 30px;
         margin-top: 2px;
         float: left; }
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
           .footer .bottom-bar .footer-nav .social {
             float: none;
             width: 100%;
@@ -3390,11 +3420,15 @@ h1 {
   height: 50px;
   border-radius: 50%;
   background: #a82e37;
-  bottom: -100%;
+  bottom: 1em;
   right: 1em;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
   color: #efeeed;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); }
-  @media screen and (max-width: 560px) {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  z-index: 10000; }
+  @media screen and (max-width: 560px), (max-width: 1024px) and (orientation: landscape) {
     .back-to-top {
       width: 35px;
       height: 35px;
@@ -3403,7 +3437,9 @@ h1 {
     background: #efeeed;
     color: #a82e37; }
   .back-to-top.visible {
-    bottom: 1em; }
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
   .back-to-top::before {
     content: '\f106';
     font-family: 'FontAwesome';

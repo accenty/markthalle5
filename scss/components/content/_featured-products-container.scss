@@ -2,17 +2,18 @@
   padding: 173px 0 53px;
   background: url('img/blur-bg.jpg');
   background-size: cover;
+  overflow: hidden;
 
   @media screen and (max-width: $breakpoint-medium-large) {
     padding: 133px 0 13px;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
     padding: 30px 0;
   }
 
   .column-wrap {
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       flex-wrap: wrap;
     }
   }
@@ -42,12 +43,13 @@
       margin-right: 10px;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       border-left: 2px solid $color-neutral-brightest;
       text-align: left;
       padding: 1em;
       margin-bottom: 10px;
       margin-right: 0;
+      overflow: hidden;
     }
 
     &:last-of-type {
@@ -55,8 +57,6 @@
     }
 
     &:hover {
-      // box-shadow: 0px 4px 25px rgba($color-neutral-darkest,.2), 0px 5px 10px rgba($color-neutral-darkest,.1);
-
       button {
         background: transparent;
         color: $color-neutral-brightest;
@@ -191,7 +191,7 @@
       font-size: 21px;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       margin-bottom: 0;
       font-size: 18px;
     }
@@ -215,12 +215,14 @@
     margin: 0;
     margin-top: 31px;
     color: $color-neutral-brightest;
+    position: relative;
+    z-index: 10;
 
     @media screen and (max-width: $breakpoint-medium-large) {
       font-size: 16px;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       width: 100%;
       padding: 0;
       border: 0;
@@ -242,7 +244,7 @@
       font-size: 24px;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       font-size: 21px;
       text-align: left;
       margin-top: 0;
@@ -277,7 +279,7 @@
       width: 100%;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       margin-top: 2em;
       font-size: 14px;
       height: 40px;
@@ -293,7 +295,7 @@
 
     @media screen and (max-width: $breakpoint-medium-large) {
       display: block;
-      right: 0.125em;
+      right: -3.475em;
       max-height: 250px;
     }
   }

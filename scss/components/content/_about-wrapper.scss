@@ -51,7 +51,7 @@
         margin: .5em 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         font-size: 14px;
       }
 
@@ -104,7 +104,7 @@
         margin-top: 0;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         font-size: 14px;
         padding: 1.5em;
       }
@@ -128,7 +128,7 @@
         float: none;
       }
 
-      @media screen and (max-width: $breakpoint-small) {
+      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
         font-size: 14px;
         padding: 1.5em;
       }
@@ -144,7 +144,7 @@
         font-weight: 700;
         color: $color-font-dark;
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
           font-size: 12px;
         }
       }

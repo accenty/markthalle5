@@ -45,7 +45,7 @@ a {
   padding: 0 $content-padding;
   margin: auto;
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
     padding: 0 #{$content-padding / 1.25};
   }
 }
@@ -68,14 +68,14 @@ a {
     padding-top: 105px;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
     padding-top: 62px;
   }
 
   &.show-nav {
     left: -50%;
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       left: -70%;
     }
   }

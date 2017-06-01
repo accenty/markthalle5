@@ -24,7 +24,7 @@
     margin: 0 auto;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
     width: 135px;
     height: 15px;
   }

@@ -6,17 +6,18 @@
   left: 0;
   width: 100%;
   padding: 97px 0;
-  z-index: 9;
+  z-index: 1000;
   transition: left .3s ease;
 
   @media screen and (max-width: $breakpoint-medium-large) {
     padding: 30px 0;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
     padding: 10px 0;
     position: fixed;
   }
+
 
   .content-wrap {
     // position: relative;
@@ -47,7 +48,7 @@
     animation: slideFromTop .3s ease forwards;
     box-shadow: 0px 2px 5px rgba($color-neutral-darkest,.25);
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       animation: none;
       padding: 10px 0;
     }
@@ -56,7 +57,7 @@
   &.show-nav {
     left: -50%;
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
       left: -70%;
     }
   }
