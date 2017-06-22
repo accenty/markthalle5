@@ -14,7 +14,7 @@
 			titleParallax();
 		});
 
-    $('.single-product .quantity input[type=number]').spinner();
+    $('.quantity input[type=number]').spinner();
 
 		backTop();
 		hamburger();

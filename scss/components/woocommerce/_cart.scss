@@ -48,7 +48,7 @@
     color: $color-background;
     margin-bottom: 0;
 
-    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+    @media screen and (max-width: $breakpoint-small) {
       margin-bottom: 10px;
     }
 
@@ -85,7 +85,7 @@
     }
 
     .product-remove {
-      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+      @media screen and (max-width: $breakpoint-small) {
         padding: .5em;
       }
     }
@@ -127,19 +127,19 @@
 
     .actions {
       .coupon {
-        @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+        @media screen and (max-width: $breakpoint-small) {
           margin-bottom: 0;
         }
 
         input[type="text"] {
-          @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+          @media screen and (max-width: $breakpoint-small) {
             width: 100%;
             float: none;
           }
         }
 
         input[type="submit"] {
-          @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+          @media screen and (max-width: $breakpoint-small) {
             width: 100%;
             float: none;
             margin-top: 10px;
@@ -305,7 +305,7 @@
           letter-spacing: .125em;
           line-height: normal;
 
-          @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+          @media screen and (max-width: $breakpoint-small) {
             font-size: 12px;
           }
         }
@@ -335,7 +335,7 @@
           font-size: 24px;
           color: $color-highlight;
 
-          @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+          @media screen and (max-width: $breakpoint-small) {
             font-size: 16px;
           }
         }

@@ -3,15 +3,12 @@
   overflow: hidden;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
   color: $color-neutral-brightest;
   position: relative;
 
-  @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
-    height: 75vh;
-    background-position: top center;
-    background-attachment: inherit;
+  @media screen and (max-width: $breakpoint-small) {
+    height: 55vh;
   }
 
   .content-wrap {
@@ -29,7 +26,7 @@
       max-width: none;
     }
 
-    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+    @media screen and (max-width: $breakpoint-small) {
       height: calc(100% - 66px);
       max-width: none;
     }
@@ -45,7 +42,7 @@
         max-width: none;
       }
 
-      @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+      @media screen and (max-width: $breakpoint-small) {
         width: 100%;
         max-width: none;
       }
@@ -81,7 +78,6 @@
 
     @media screen and (max-width: $breakpoint-medium) {
       font-size: 14px;
-      line-height: 1.5em;
     }
   }
 
@@ -101,7 +97,7 @@
       opacity: .5;
     }
 
-    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+    @media screen and (max-width: $breakpoint-small) {
       width: 80%;
       right: -45%;
       opacity: .5;
@@ -130,7 +126,7 @@
       font-size: 24px;
     }
 
-    @media screen and (max-width: $breakpoint-small), (max-width: $breakpoint-medium-large) and (orientation: landscape) {
+    @media screen and (max-width: $breakpoint-small) {
       font-size: 18px;
       padding: 20px 0;
     }
